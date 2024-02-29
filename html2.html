@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport'' content=width=device-width, initial-scale=1'' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDZ Informatics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #551287;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .create-button {
+            position: absolute;
+            top: 20%;
+            right: 100px;
+            transform: translateY(50%);
+            padding: 8px 20px; /* Adjust padding for larger size */
+            font-size: 20px;
+            background-color: #551e98; /* Change background color */
+            color: #fbfbfbf8; /* Change text color */
+            border: 2px solid #2f024b;/* Remove border */
+            border-radius: 5px; /* Optional: Add border radius */
+        }
+        .create-button:hover {
+            background-color: #86239c; /* Change background color on hover */
+            border-color: #b3ca08; /* Change border color on hover */
+            color: #fff; /* Change text color on hover */
+        }
+        .menu {
+            padding: 20px;
+            border: 1px solid #501292;
+            border-radius: 5px;
+            background-color: rgb(238, 230, 230);
+        }
+        .menu a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #290a5b;
+            text-decoration: none;
+            font-size: 16px; /* default font size */
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .menu .nav-link .icon {
+            margin-right: 10px;
+        }
+        .menu .nav-link.active {
+            font-size: 24px; /* font size for the active tab */
+        }
+        .menu .nav-link.clients {
+            font-size: 24px; /* font size for the Clients tab */
+        }
+        .menu .nav-link.questions {
+            font-size: 24px; /* font size for the Questions tab */
+        }
+        .menu .nav-link.money {
+            font-size: 24px; /* font size for the My Money tab */
+        }
+        .menu .nav-link.calendar {
+            font-size: 24px; /* font size for the Calendar tab */
+        }
+        .menu .nav-link.lightning {
+            font-size: 24px; /* font size for the Lightning tab */
+        }
+        .main-content {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #24044b;
+        }
+        th {
+            background-color: #8582c2;
+        }
+        .edz-frame {
+            border: 1px solid #070b76;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .question-row {
+            background-color: #e4ebe5 !important; /* Light gray background for questions */
+        }
+        .edit-delete-row {
+            background-color: #d5e2e8 !important; /* Light blue background for edit/delete buttons */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #551287;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="font-family: Brush Script MT, serif;">Asma Kauser Coaching</h1>
+        <div style="display: flex; align-items: center;">
+            <i class="fas fa-bell" style="font-size :28px ;margin-right: 0.5em;"></i>
+            <p style="margin-right: 20px;"><h4 style="font-family: Copperplate, serif;">  Asma Kauser  </h4></p>
+            <div style="border-radius: 60%; background-color: #4f2fa6; color: #fff; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center;">
+                <i class="fas fa-user-circle" style="font-size: 44px;"></i>
+            </div>
+        </div>
+    </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="edz-frame">
+                <div class="menu">
+                    <div class="header">
+                        <h3 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Questions Menu </h3>
+                       
+                    </div>
+                    
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span class="icon"><i class="fas fa-home"></i></span> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link clients" href="#">
+                                <span class="icon"><i class="fas fa-users"></i></span> Client
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link questions" href="#">
+                                <span class="icon"><i class="fas fa-lightbulb"></i></span> Questions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link money" href="#">
+                                <span class="icon"><strong>&#x0024;</strong></span> My Money
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link calendar" href="#">
+                                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Calendar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="edz-frame">
+                <div class="header">
+                    <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Questions Quest </h1>
+                   
+                </div>
+                <div class="main-content">
+                    <h2>Present Situation </h2>  
+                    <h5><p>This section provides an overview of the current situation.</p></h5>
+                    <h2>Questions</h2> <button class="create-button btn btn-primary">Create Questions</button>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter Questions..." aria-label="Search..." aria-describedby="search-icon">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="search-icon"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><h4>Questions</h4></th>
+                                <th><h4>Edit</h4></th>
+                                <th><h4>Delete</h4></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><h5> How do you currently balance your responsibilities as a full-time worker and Secretary of the local Sports Club with your role as a parent to teenagers?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h5>How do you handle conflicts or disagreements with your teenagers while maintaining a positive and respectful relationship?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h5>What strategies do you use to support your teenagers in managing their academic workload, extracurricular activities, and social lives?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h5>How do you establish boundaries and rules for your teenagers, and how do you handle it when those boundaries are tested or crossed?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h5>Have you noticed any changes in your teenagers' behavior or emotions recently, and if so, how are you addressing those changes?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <tr>
+                                <td><h5>What role do you believe your involvement in the local Sports Club plays in your teenagers' lives, and how do you balance that involvement with family time?</h5></td>
+                                <td><h2><i class="fas fa-edit mr-2"></i></h2></td>
+                                <td><h2><i class="fas fa-trash-alt"></i></h2></td>
+                            </tr>
+                            <!-- Add more rows for additional questions -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <h4>&copy; EDZ Informatics </h4>
+</footer>
+</body>
+</html>
